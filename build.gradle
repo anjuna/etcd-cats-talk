@@ -1,0 +1,24 @@
+plugins {
+    id 'scala'
+}
+
+group 'jwj'
+version '1.0'
+
+repositories {
+    mavenCentral()
+}
+
+dependencies {
+  implementation 'org.scala-lang:scala-library:2.12.8'
+  implementation 'org.typelevel:cats-effect_2.12:3.5.1'
+  implementation 'io.etcd:jetcd-core:0.7.6'
+  implementation 'org.slf4j:slf4j-nop:2.0.9'
+}
+
+jar {
+    duplicatesStrategy = DuplicatesStrategy.EXCLUDE //please don't ask me why this is here
+    from {
+        configurations.runtimeClasspath.collect { it.isDirectory() ? it : zipTree(it) }
+    }
+}
