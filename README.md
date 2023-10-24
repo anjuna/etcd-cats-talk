@@ -1,6 +1,6 @@
 # Distributed Systems with Cats-Effect and ETCD
 
-This is the accompanying code for my talk given on 18th October 2023.
+This is the accompanying code for my talk given on 18th October 2023 at the London Scala User Group. Please find the slides under `content/`
 
 ### Wikipedia pages
 
